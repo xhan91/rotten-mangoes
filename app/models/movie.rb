@@ -1,6 +1,8 @@
+require 'carrierwave/orm/activerecord'
 class Movie < ApplicationRecord
 
   has_many :reviews
+  mount_uploader :poster_image_url, ImageUploader
 
   validates :title, presence: true
   validates :director, presence: true
