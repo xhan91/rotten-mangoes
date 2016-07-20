@@ -4,6 +4,6 @@
   <%= link_to "Detail", admin_user_path(user) %> |
   <%= link_to "Edit", edit_admin_user_path(user) %> | 
   <%= link_to "Delete", admin_user_path(user), method: :delete, data: {confirm: "You sure?"} %> |
-  <%= link_to "Fake", "/sessions/fake/#{user.id}", method: :post %>
+  <%= link_to "Fake", "/session/fake/#{user.id}", method: :post %>
   <hr>
 </div>

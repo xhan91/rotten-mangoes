@@ -2,7 +2,7 @@
   <small>
     <% if current_user %>
       Signed in as <%= current_user.full_name %> (<%= link_to "Log out", session_path("current"), method: :delete %>)
-      <%= link_to "Quit fake", "/sessions/fake/quit", method: :post if session[:admin_id] %>
+      <%= link_to "Quit fake", "/session/fake/quit", method: :post if session[:admin_id] %>
     <% else %>
       <%= link_to "Log In", new_session_path %> | <%= link_to "Sign Up", new_user_path %>
     <% end %>
