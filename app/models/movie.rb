@@ -12,6 +12,10 @@ class Movie < ApplicationRecord
 
   validate :release_date_is_in_the_past
 
+  scope :under_90, -> { where("runtime_in_minutes < ?", 90) }
+  scope :between_90_and_120, -> { where("runtime_in_minutes >= ? AND runtime_in_minutes <= ?", 90, 120) }
+  scope :over_120, -> { where("runtime_in_minutes > ?", 120) }
+
   def review_average
     reviews.size == 0 ? 0 : reviews.sum(:rating_out_of_ten)/reviews.size
   end

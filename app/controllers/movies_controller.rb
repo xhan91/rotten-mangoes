@@ -5,11 +5,11 @@ class MoviesController < ApplicationController
     @movies = @movies.where("title LIKE :s OR director LIKE :s", s: "%#{keyword}%") if keyword
     case params[:time_scope].to_i
     when 1
-      @movies = @movies.where("runtime_in_minutes < ?", 90)
+      @movies = @movies.under_90
     when 2
-      @movies = @movies.where("runtime_in_minutes >= ? AND runtime_in_minutes <= ?", 90, 120)
+      @movies = @movies.between_90_and_120
     when 3
-      @movies = @movies.where("runtime_in_minutes > ?", 120)
+      @movies = @movies.over_120
     else
       @movies
     end
