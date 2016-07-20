@@ -24,6 +24,10 @@ class ApplicationController < ActionController::Base
     current_user && current_user.admin
   end
 
+  # def admin_fake?
+  #   sessions[:admin_id] ? true : false
+  # end
+
   helper_method :current_user, :current_admin?
   
 end
