@@ -1,7 +1,4 @@
 <h1>ADMIN TERRITORY</h1>
-<% @users.each do |user| %>
-  <div>
-    <%= user.full_name %> <br>
-    <%= user.email %> <br>    
-  </div>
-<% end %>
+<%= link_to "Create a new account", new_admin_user_path %>
+<hr>
+<%= render @users %>
