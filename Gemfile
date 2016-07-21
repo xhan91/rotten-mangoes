@@ -32,6 +32,12 @@ gem 'awesome_print'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'kaminari'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-select-rails'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

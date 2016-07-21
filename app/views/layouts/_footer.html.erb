@@ -1,10 +1,3 @@
-<footer>
-  <small>
-    <% if current_user %>
-      Signed in as <%= current_user.full_name %> (<%= link_to "Log out", session_path("current"), method: :delete %>)
-      <%= link_to "Quit fake", session_fake_quit_path, method: :post if session[:admin_id] %>
-    <% else %>
-      <%= link_to "Log In", new_session_path %> | <%= link_to "Sign Up", new_user_path %>
-    <% end %>
-  </small>
-</footer>
+<div class="container">
+  <small><%= "user_id: #{session[:user_id]}" %></small>
+</div>

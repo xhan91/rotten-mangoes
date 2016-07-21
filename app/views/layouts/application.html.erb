@@ -6,13 +6,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- bootstrap select -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
-    <% flash.each do |key, value| %>
-      <%= content_tag(:div, value) %>
-    <% end %>
-    <%= yield %>
+    <%= render 'layouts/nav' %>
+    <section class="container">
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, value) %>
+      <% end %>
+      <%= yield %>
+    </section>
     <%= render 'layouts/footer' %>
   </body>
 </html>
