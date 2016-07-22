@@ -13,7 +13,11 @@ class MoviesController < ApplicationController
     else
       @movies
     end
-
+    @movies = @movies.order(release_date: :desc)
+    respond_to do |format|
+      format.html { render 'index' }
+      format.json { render json: @movies }
+    end
   end
 
   def show

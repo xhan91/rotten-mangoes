@@ -1,7 +1,8 @@
-<%= link_to "Back to all movies", movies_path %><br/>
-
-<%= link_to image_tag(@movie.poster_image_url_url(:thumb)), movie_path(@movie) %>
-<h2><%= @movie.title %> (<%= link_to "edit", edit_movie_path(@movie) %>, <%= link_to "delete", movie_path(@movie), method: :delete, data: {confirm: "You sure?"} %>)</h2>
+<div>
+  <%= link_to "Back to all movies", movies_path, class: "btn btn-info btn-fixed-top-right" %>
+</div>
+<%= image_tag(@movie.poster_image_url || "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSBgDxrDDIaAHz9fnkVuUBxboxJlg7zwD4OTl1yEGnByDKqvt7qZ05ji9CP8g") %>
+<h2><%= @movie.title %> <%= link_to "edit", edit_movie_path(@movie), class: "btn btn-info" %> <%= link_to "delete", movie_path(@movie), method: :delete, data: {confirm: "You sure?"}, class: "btn btn-danger" %></h2>
 <h3><%= formatted_date(@movie.release_date) %></h3>
 <h4>Dir. <%= @movie.director %> | <%= @movie.runtime_in_minutes %> minutes</h4>
 <p><%= @movie.description %></p>
@@ -13,7 +14,7 @@
     <p><%= review.rating_out_of_ten %>/10</p>
     <small>- <%= review.user.full_name %></small><br/>
   <% end %>
-  <p><%= link_to "Write a review!", new_movie_review_path(@movie) %></p>
+  <p><%= link_to "Write a review!", new_movie_review_path(@movie), class: "btn btn-info" %></p>
 <% else %>
   <p>Please <%= link_to "log in", new_session_path %> to see reviews and add your own.</p> 
 <% end %>

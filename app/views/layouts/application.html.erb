@@ -6,13 +6,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Mirza" rel="stylesheet">
   </head>
 
   <body>
-    <% flash.each do |key, value| %>
-      <%= content_tag(:div, value) %>
-    <% end %>
-    <%= yield %>
+    <%= render 'layouts/nav' %>
+    <%= render 'layouts/notice'%>
+    <section class="container">
+      <%= yield %>
+    </section>
     <%= render 'layouts/footer' %>
   </body>
 </html>

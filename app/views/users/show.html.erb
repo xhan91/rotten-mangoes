@@ -1,0 +1,10 @@
+<h1><%= @user.full_name %></h1>
+<h2>Email: <%= @user.email %></h2>
+<h2>Reviews: </h2>
+<p>
+  <ul>
+    <% @user.reviews.each do |review| %>
+      <li><%= review.text %></li>
+    <% end %>
+  </ul>
+</p>

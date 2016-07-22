@@ -1,15 +1,9 @@
-<h1>Rotten Mangoes</h1>
-<%= link_to "Submit a movie!", new_movie_path %>
-<hr>
-<%= form_tag movies_path, method: :get do %>
-  <div>
-    <%= select_tag(:time_scope, options_for_select([['Not specified', 0], ['Under 90 minutes', 1], 
-      ['Between 90 and 120 minutes', 2], ['Over 120 minutes', 3]])) %>
-  </div>
-  <div>
-    <%= text_field_tag :keyword, nil, placeholder: "Keyword" %>
-  </div>
-  <div><%= submit_tag "Search" %></div>
-<% end %>
-<hr>
-<%= render @movies %>
+<%= link_to "Post a movie!", new_movie_path, class: "btn btn-info btn-fixed-top-right" %>
+
+<%= render 'search_form' %>
+
+<div class="grid">
+  <div class="grid-sizer"></div>
+  <div class="grid-gutter"></div>
+  <%= render @movies %>
+</div>

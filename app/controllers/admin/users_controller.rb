@@ -3,7 +3,7 @@ class Admin::UsersController < ApplicationController
   before_action :admin_access
 
   def index
-    @users = User.order(:firstname, :lastname).page(params[:page]).per(5)
+    @users = User.order(:id).page(params[:page]).per(10)
   end
 
   def show
