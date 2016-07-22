@@ -1,5 +1,9 @@
-<%= link_to "Submit a movie!", new_movie_path, class: "btn btn-info new-movie" %>
+<%= link_to "Post a movie!", new_movie_path, class: "btn btn-info btn-fixed-top-right" %>
 
 <%= render 'search_form' %>
 
-<%= render @movies %>
+<div class="grid">
+  <div class="grid-sizer"></div>
+  <div class="grid-gutter"></div>
+  <%= render @movies %>
+</div>

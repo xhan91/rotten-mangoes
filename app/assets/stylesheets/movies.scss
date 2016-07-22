@@ -2,12 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.search-form {
-  padding-bottom: 20px;
+.movie-cell {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-.new-movie {
-  position: fixed;
-  right: 5%;
-  bottom: 5%;
+.no-resize-ta {
+  resize: none;
+}
+
+.search-form {
+  padding-bottom: 20px;
 }

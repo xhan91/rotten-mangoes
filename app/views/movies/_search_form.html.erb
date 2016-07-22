@@ -2,13 +2,15 @@
   <div class="search-form">
     <div class="row">
       <div class="col-xs-3">
-        <%= select_tag :time_scope, options_for_select([['Not specified', 0], ['Under 90 minutes', 1], ['Between 90 and 120 minutes', 2], ['Over 120 minutes', 3]]), { class: "selectpicker" } %>
+        <%= select_tag :time_scope, options_for_select([['Not specified', 0], ['Under 90 minutes', 1], ['Between 90 and 120 minutes', 2], ['Over 120 minutes', 3]]), { class: "form-control" } %>
       </div>
-      <div class="input-group col-xs-9">
-        <%= text_field_tag :keyword, nil, placeholder: "Keyword", class: "form-control" %>
-        <span class="input-group-btn">
-          <%= submit_tag "Search", class: "btn btn-info" %>
-        </span>
+      <div class="col-xs-9">
+        <div class="input-group">
+          <%= text_field_tag :keyword, nil, placeholder: "Keyword", class: "form-control" %>
+          <span class="input-group-btn">
+            <%= submit_tag "Search", class: "btn btn-info" %>
+          </span>
+        </div>
       </div>
     </div>
   </div>

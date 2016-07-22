@@ -1,6 +1,13 @@
-<%= link_to image_tag(movie.poster_image_url_url(:poster)), movie_path(movie) %>
-<h2><%= link_to movie.title, movie_path(movie) %> | <%= movie.review_average %>/10</h2>
-<h3><%= formatted_date(movie.release_date) %></h3>
-<h4>Dir. <%= movie.director %> | <%= movie.runtime_in_minutes %> minutes</h4>
-<p><%= movie.description %></p>
-<hr>
+<div class="movie-cell grid-item">
+  <div class="">
+    <% image = movie.poster_image_url %>
+    <% image = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSBgDxrDDIaAHz9fnkVuUBxboxJlg7zwD4OTl1yEGnByDKqvt7qZ05ji9CP8g" unless movie.poster_image_url_url(:thumb) %>
+    <%= image_tag(image, class: "img-responsive img-rounded") %>
+  </div>
+  <div class="">
+    <h2><%= movie.title %> | <%= movie.review_average %>/10   <small><%= formatted_date(movie.release_date) %></small></h2>
+    <h4>Dir. <%= movie.director %> | <%= movie.runtime_in_minutes %> minutes</h4>
+    <p><%= movie.description %></p>
+    <%= link_to "Detail", movie_path(movie), class: "btn btn-info pull-right" %>
+  </div>
+</div>

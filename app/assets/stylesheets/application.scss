@@ -15,8 +15,36 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "movies";
+@import "session";
+@import "admin";
 
-body { padding-top: 70px; }
+* {
+  font-family: 'Mirza', cursive;
+}
+
+p {
+  font-family: verdana;
+}
+
+body { 
+  padding-top: 70px;
+  background-color: lightgrey;
+}
+
+.btn-fixed-top-right {
+  position: fixed;
+  right: 5%;
+  top: 20%;
+  z-index: 5;
+}
+
+.grid-sizer, .grid-item {
+  width: 19%;
+}
+
+.grid-gutter {
+  width: 1.25%;
+}
 
 .navbar-brand {
   font-family: 'Lobster', cursive;

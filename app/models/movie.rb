@@ -6,7 +6,7 @@ class Movie < ApplicationRecord
   validates :title, presence: true
   validates :director, presence: true
   validates :description, presence: true
-  validates :poster_image_url, presence: true
+  # validates :poster_image_url, presence: true
   validates :release_date, presence: true
   validates :runtime_in_minutes, numericality: { only_integer: true }
 
@@ -17,7 +17,7 @@ class Movie < ApplicationRecord
   scope :over_120, -> { where("runtime_in_minutes > ?", 120) }
 
   def review_average
-    reviews.size == 0 ? 0 : reviews.sum(:rating_out_of_ten)/reviews.size
+    reviews.size == 0 ? 0 : (reviews.sum(:rating_out_of_ten)/reviews.size.to_f).round(1)
   end
 
   protected
