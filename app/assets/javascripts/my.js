@@ -1,11 +1,11 @@
-$(document).ready(function(){
+// $(document).ready(function(){
 
-  var $grid = $('.grid').masonry({
-    // options
-    itemSelector: '.grid-item',
-    columnWidth: '.grid-sizer',
-    gutter: '.grid-gutter',
-    percentPosition: true
-  });
+//   var $grid = $('.grid').masonry({
+//     // options
+//     itemSelector: '.grid-item',
+//     columnWidth: '.grid-sizer',
+//     gutter: '.grid-gutter',
+//     percentPosition: true
+//   });
 
-});
+// });
