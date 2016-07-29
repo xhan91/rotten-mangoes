@@ -1,24 +1,8 @@
-# README
+# [Rotten Mangoes](https://xhan91-rotten-mangoes.herokuapp.com/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Rotten Tomatoes like web application for people to post and share movies and reviews.
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Tech Stack 
+- The application is developed with Ruby on Rails. 
+- Some javascript plugins used for front-end decoration.
